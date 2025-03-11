@@ -9,12 +9,14 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use HasApiTokens;
 
     /** @use HasFactory<\Database\Factories\UserFactory> */
+    use HasRoles;
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
@@ -25,8 +27,13 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    public $primaryKey = 'id';
+
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
+        'date_of_birth',
         'email',
         'password',
     ];
