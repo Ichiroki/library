@@ -17,5 +17,45 @@ class CategoriesSeeder extends Seeder
             'name' => 'Business & Economy',
             'slug' => 'business-and-economy'
         ]);
+
+        Categories::create([
+            'name' => 'Fiction & Fantasy',
+            'slug' => 'fiction-and-fantasy'
+        ]);
+
+        Categories::create([
+            'name' => 'Education',
+            'slug' => 'education'
+        ]);
+
+        Categories::create([
+            'name' => 'Psychology',
+            'slug' => 'psychology'
+        ]);
+
+        Categories::create([
+            'name' => 'Romance',
+            'slug' => 'romance'
+        ]);
+
+        Categories::create([
+            'name' => 'Motivation & Inspiration',
+            'slug' => 'motivation-and-inspiration'
+        ]);
+
+        Categories::create([
+            'name' => 'Mystery',
+            'slug' => 'mystery'
+        ]);
+
+        Categories::create([
+            'name' => 'general',
+            'slug' => 'general'
+        ]);
+
+        Categories::create([
+            'name' => 'Law & Firm',
+            'slug' => 'law-and-firm'
+        ]);
     }
 }

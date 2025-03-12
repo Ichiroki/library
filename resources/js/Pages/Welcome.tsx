@@ -3,6 +3,7 @@ import React from 'react';
 import useRoute from '@/Hooks/useRoute';
 import useTypedPage from '@/Hooks/useTypedPage';
 import { Head } from '@inertiajs/react';
+import Navbar from '@/Components/organism/Navbar';
 
 interface Props {
   canLogin: boolean;
@@ -24,7 +25,7 @@ export default function Welcome({
     <>
       <Head title="Welcome" />
 
-      <div className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+      {/* <div className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
         {canLogin ? (
           <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
             {page.props.auth.user ? (
@@ -348,7 +349,8 @@ export default function Welcome({
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <Navbar/>
     </>
   );
 }

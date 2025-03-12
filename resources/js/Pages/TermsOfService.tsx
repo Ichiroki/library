@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthenticationCardLogo from '@/Components/AuthenticationCardLogo';
+import AuthenticationCardLogo from '@/Components/atoms/AuthenticationCardLogo';
 import { Head } from '@inertiajs/react';
 
 interface Props {

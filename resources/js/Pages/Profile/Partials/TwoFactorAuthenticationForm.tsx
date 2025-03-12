@@ -3,14 +3,14 @@ import { useForm } from '@inertiajs/react';
 import axios from 'axios';
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import ActionSection from '@/Components/ActionSection';
+import ActionSection from '@/Components/molecules/ActionSection';
 import ConfirmsPassword from '@/Components/ConfirmsPassword';
-import DangerButton from '@/Components/DangerButton';
-import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
+import DangerButton from '@/Components/atoms/DangerButton';
+import InputError from '@/Components/atoms/InputError';
+import InputLabel from '@/Components/atoms/InputLabel';
+import PrimaryButton from '@/Components/atoms/PrimaryButton';
 import SecondaryButton from '@/Components/SecondaryButton';
-import TextInput from '@/Components/TextInput';
+import TextInput from '@/Components/atoms/TextInput';
 import useTypedPage from '@/Hooks/useTypedPage';
 
 interface Props {

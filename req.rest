@@ -1,0 +1,14 @@
+POST http://127.0.0.1:8080/data/books/create
+Content-Type: "application/json"
+
+{
+    "id": "5c46beee-c72b-4aac-baee-8a34dfc1a148",
+    "title": "lorem ipsum dolor sit amet",
+    "author": "Al Khawarizmi",
+    "publisher": "Bebas",
+    "date_publish": "2015-08-15",
+    "categories_id": 5,
+    "stock": 100,
+    "page": 95,
+    "description": "lorem ipsum dolor sit amet"
+}

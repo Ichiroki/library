@@ -16,6 +16,10 @@ class BookLendsTest extends TestCase
     public function test_add_book_lend()
     {
         $this->seed();
+
+        $book = Book::where('author', '=', 'Al Khawarizmi')->get();
+        
+
         $this->assertDatabaseHas('books', ['author' => 'Al Khawarizmi']);
     }
 }

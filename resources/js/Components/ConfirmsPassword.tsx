@@ -2,10 +2,10 @@ import axios from 'axios';
 import classNames from 'classnames';
 import React, { PropsWithChildren, useRef, useState } from 'react';
 import useRoute from '@/Hooks/useRoute';
-import DialogModal from '@/Components/DialogModal';
-import InputError from '@/Components/InputError';
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
+import DialogModal from '@/Components/organism/DialogModal';
+import InputError from '@/Components/atoms/InputError';
+import PrimaryButton from '@/Components/atoms/PrimaryButton';
+import TextInput from '@/Components/atoms/TextInput';
 import SecondaryButton from '@/Components/SecondaryButton';
 
 interface Props {

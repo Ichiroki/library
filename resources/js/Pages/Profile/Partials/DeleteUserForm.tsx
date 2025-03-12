@@ -2,11 +2,11 @@ import { useForm } from '@inertiajs/react';
 import classNames from 'classnames';
 import React, { useRef, useState } from 'react';
 import useRoute from '@/Hooks/useRoute';
-import ActionSection from '@/Components/ActionSection';
-import DangerButton from '@/Components/DangerButton';
-import DialogModal from '@/Components/DialogModal';
-import TextInput from '@/Components/TextInput';
-import InputError from '@/Components/InputError';
+import ActionSection from '@/Components/molecules/ActionSection';
+import DangerButton from '@/Components/atoms/DangerButton';
+import DialogModal from '@/Components/organism/DialogModal';
+import TextInput from '@/Components/atoms/TextInput';
+import InputError from '@/Components/atoms/InputError';
 import SecondaryButton from '@/Components/SecondaryButton';
 
 export default function DeleteUserForm() {

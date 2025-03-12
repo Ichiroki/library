@@ -20,10 +20,10 @@ return new class extends Migration
             $table->unsignedBigInteger('categories_id');
             $table->integer('stock');
             $table->integer('page');
-            $table->string('description');
+            $table->string('description', 1000);
             $table->timestamps();
 
-            $table->foreign('categories_id')->references('id')->on('categories');
+            $table->foreign('categories_id')->references('id')->on('categories')->cascadeOnUpdate();
         });
     }
 

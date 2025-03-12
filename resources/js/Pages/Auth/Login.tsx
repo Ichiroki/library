@@ -2,12 +2,12 @@ import { Link, useForm, Head } from '@inertiajs/react';
 import classNames from 'classnames';
 import React from 'react';
 import useRoute from '@/Hooks/useRoute';
-import AuthenticationCard from '@/Components/AuthenticationCard';
-import Checkbox from '@/Components/Checkbox';
-import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
-import InputError from '@/Components/InputError';
+import AuthenticationCard from '@/Components/organism/AuthenticationCard';
+import Checkbox from '@/Components/atoms/Checkbox';
+import InputLabel from '@/Components/atoms/InputLabel';
+import PrimaryButton from '@/Components/atoms/PrimaryButton';
+import TextInput from '@/Components/atoms/TextInput';
+import InputError from '@/Components/atoms/InputError';
 
 interface Props {
   canResetPassword: boolean;
