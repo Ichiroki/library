@@ -16,14 +16,14 @@ interface CardComponent extends React.FC<CardProps> {
 const Card:CardComponent = ({image, children}: CardProps) => {
     return (
         <CardProvider image={image}>
-            <div className='card-container w-11/12 rounded-md px-4 md:w-3/4 flex'>{children}</div>
+            <div className='card-container rounded-md px-4 flex flex-col md:flex-row'>{children}</div>
         </CardProvider>
     );
 }
 
 const CardImage: React.FC = () => {
     const {image} = useCardContext()
-    return image ? <img src={image} alt="card" className="card-image w-60"/> : null
+    return image ? <img src={image} alt="card" className="card-image md:w-72 lg:w-60"/> : null
 }
 
 const CardHeader: React.FC<{children: ReactNode}> = ({children}) => {
@@ -31,7 +31,7 @@ const CardHeader: React.FC<{children: ReactNode}> = ({children}) => {
 }
 
 const CardBody: React.FC<{children: ReactNode}> = ({children}) => {
-    return <div className="card-body line-clamp-3 text-justify">{children}</div>
+    return <div className="card-body">{children}</div>
 }
 
 const CardFooter: React.FC<{children: ReactNode}> = ({children}) => {

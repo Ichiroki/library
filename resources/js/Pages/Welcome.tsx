@@ -1,11 +1,9 @@
-import { Link } from '@inertiajs/react';
-import React, { useEffect, useState } from 'react';
+import Card from '@/Components/molecules/Card/Index';
 import useRoute from '@/Hooks/useRoute';
 import useTypedPage from '@/Hooks/useTypedPage';
-import { Head } from '@inertiajs/react';
-import Navbar from '@/Components/organism/Navbar';
-import axios from 'axios';
-import Card from '@/Components/molecules/Card/Index';
+import { Head, Link } from '@inertiajs/react';
+import { Sidebar } from '@/Components/organism/Sidebar';
+import React from 'react';
 
 interface Props {
     news: {
@@ -240,14 +238,15 @@ export default function Welcome({
           </div>
         </div>
       </div> */}
-      <Navbar/>
 
 
-        <main className='main-content flex flex-col justify-center mt-12 gap-9 px-10'>
+
+        <main className='main-content flex flex-col justify-center mt-12 gap-9 px-10 lg:w-9/12'>
+            <Sidebar/>
             {newsList ? newsList.map((news: NewsDataProps) => (
                 <Card key={key++} image={news.thumbnail}>
                     <Card.Image/>
-                    <a href={news.link} className='flex flex-col ml-5 group'>
+                    <a href={news.link} className='flex flex-col md:ml-5 group'>
                         <Card.Header>
                             <small>{new Date(news.pubDate).toLocaleDateString("id-ID", {
                                 weekday: "long",
@@ -258,7 +257,7 @@ export default function Welcome({
                             <h3 className='font-semibold text-xl text-justify group-hover:text-blue-400 transition-all duration-200'>{news.title}</h3>
                         </Card.Header>
                         <Card.Body>
-                            <p>{news.description}</p>
+                            <p className='line-clamp-3 lg:line-clamp-6 text-justify'>{news.description}</p>
                         </Card.Body>
                         <Card.Footer>
                             <Link href={news.link}></Link>
