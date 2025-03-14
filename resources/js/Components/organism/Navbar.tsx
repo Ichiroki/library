@@ -8,7 +8,7 @@ import NavLink from '../atoms/NavLink';
 function Navbar() {
     return (
         <>
-            <nav className='bg-slate-300 px-5 py-3 flex justify-between'>
+            <nav className='bg-slate-200 px-10 py-3 flex justify-between'>
                 <div>
                     <NavLink href='/'>Library</NavLink>
                 </div>

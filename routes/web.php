@@ -3,10 +3,15 @@
 use App\Http\Controllers\BookController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
 use Inertia\Inertia;
 
 Route::get('/', function () {
+
+    $news = HTTP::get('https://api-berita-indonesia.vercel.app/tempo/bisnis');
+
     return Inertia::render('Welcome', [
+        'news' => $news->object(),
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
